@@ -1,4 +1,4 @@
-package Expedia;
+			package Expedia;
 
 public class Car implements Booking {
 	private int numberOfDaysToRent;
