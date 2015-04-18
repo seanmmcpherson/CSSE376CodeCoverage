@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
+
 import Expedia.*;
 
 import org.junit.After;
@@ -77,16 +78,16 @@ public class FlightTest {
 	/*@Test
 	public void TestThatFlightDoesGetNumberOfPassengers()
 	{
-		var mockDatabase = mocks.StrictMock<IDatabase>();
+		IDatabase mockDatabase = mocks.StrictMock<IDatabase>();
 		
-		var values = new List<String>();
-		for(var i = 0; i < 50; i++)
+		List<String> values = new List<String>();
+		for(int i = 0; i < 50; i++)
 			values.Add("Bob");
 		
 		Expect.Call(mockDatabase.Passengers).Return(values);
 		mocks.ReplayAll();
 		
-		var target = new Flight(Date.Now, Date.Now.AddDays(1), 0);
+		Flight target = new Flight(Date.Now, Date.Now.AddDays(1), 0);
 		
 		target.Database = mockDatabase;
 		Assert.AreEqual(50, target.NumberOfPassengers);
