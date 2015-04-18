@@ -84,7 +84,7 @@ public class FlightTest {
 		for(int i = 0; i < 50; i++)
 			values.Add("Bob");
 		
-		Expect.Call(mockDatabase.Passengers).Return(values);
+		Expect.Call(mockDatabase.Passengers).Return(values);	
 		mocks.ReplayAll();
 		
 		Flight target = new Flight(Date.Now, Date.Now.AddDays(1), 0);

@@ -119,6 +119,11 @@ public class UserTest
 	assertEquals(1024.65,this.target.Price(), 0.01);
 	}
 	
+	@Test(expected=RuntimeException.class)
+	public void TestHotelNoNegativeNightsToRent() {
+		new Hotel(-1);
+	}
+	
 	@After
 	public void TearDown()
 	{
